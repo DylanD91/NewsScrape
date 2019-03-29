@@ -1,0 +1,28 @@
+<h1>CNN News Scraper</h1>
+     
+      
+      <div id="articles">
+             <h3>Articles</h3>
+             <hr>
+           {{#each articles}}
+                <a href={{link}} target="_blank">{{title}}</a> 
+  
+                {{#if saved}}
+                
+                <a data-id={{_id}} class="saved">Unsave</a>
+                
+                {{else}}
+                <a data-id={{_id}} class="notSaved">Save</a>
+
+                {{/if}}
+
+            </div>
+          {{/each}}
+
+      </div>
+      <div id="notes">
+          <h3>Notes</h3>
+          <hr>
+      </div>
+    <button id="scrape">Scrape CNN Articles</button>
+      <button id="saved">View Saved Articles</button>
